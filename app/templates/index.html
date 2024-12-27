@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Transcrição Whisper</title>
+</head>
+<body style="background-color: chocolate;">
+    <div class="container text-center" style="padding-top: 50px;">
+        <h1 class="text-white" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Faça o upload do arquivo no botão abaixo
+        </h1>
+    </div>
+    
+    <div class="container text-center" style="padding-top: 100px;">
+        <form action="transcricao" method="post" enctype="multipart/form-data" class="form-group">
+            <div class="mb-3">
+                <label for="file" class="form-label text-white">Escolha um arquivo de áudio:</label>
+                <input type="file" id="file" name="file" accept="audio/*" required class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Enviar Arquivo</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (opcional, para componentes interativos) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-JrXmS4bI3M4f6X7gd7apzIdEjiSJt3bS2r81FjkF+eFl5qMwDFOZIsgSM0l9Axi6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0rA5dOO4t7zGv4BwlxkLgo/po9aIHJrWx7L98lF34jYlF44gF" crossorigin="anonymous"></script>
+</body>
+</html>
