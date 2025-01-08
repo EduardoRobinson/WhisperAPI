@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from io import BytesIO
 from pydub import AudioSegment
 
+
 load_dotenv()
 
 class Transcricao():
