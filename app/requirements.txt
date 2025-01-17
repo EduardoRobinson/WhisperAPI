@@ -5,3 +5,4 @@ openai
 dotenv
 io
 pydub
+faster_whisper
