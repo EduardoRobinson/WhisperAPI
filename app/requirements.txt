@@ -1,8 +1,12 @@
-uvicorn
-fastapi
-sqlalchemy
-openai
+uvicorn ==  0.34.0 
+fastapi == 0.0.7
+SQLAlchemy  ==  2.0.37
+openai == 1.54.5
 dotenv
 io
-pydub
+pydub == 0.25.1
 faster_whisper
+whisperx
+pydantic ==  2.10.5
+ollama == 0.3.3
+huggingface-hub  ==  0.27.1
