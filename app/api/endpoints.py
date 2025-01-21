@@ -1,4 +1,5 @@
 from app.db.models import Transcricoes
+from app.db.repository import TranscricoesRepository
 from fastapi import APIRouter,Request,File, UploadFile
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
@@ -17,10 +18,8 @@ def get_answer(request:Request):
 
 @router.post("/transcricao")
 async def get_transcricao(file:UploadFile=File(...),db: Session = Depends(get_db)):
-    transcricao=Transcricao()
+    transcricao=Transcricao(db)
     texto = await transcricao.transcrever2(file)
-    #transcricao = Transcricoes(description=texto.text)
-    #db.add(transcricao)
-    #db.commit()
-    #db.refresh(transcricao)
-    return texto
+    transcricaoRepository=TranscricoesRepository(db)
+    response=transcricaoRepository.getAll()
+    return response
