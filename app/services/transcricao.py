@@ -77,7 +77,7 @@ class Transcricao():
         self.prompt = PromptTemplate.from_template(self.question)
         chain = self.prompt | self.llm | StrOutputParser()
         response=chain.invoke({"question":self.question, "language": "pt","chat_history":[]})
-        transcricao=Transcricoes(description=string,resume=response,segments=len(result["segments"]))
+        transcricao=Transcricoes(description=string,resume=response.replace(self.question,""),segments=len(result["segments"]))
         transcricaoRepository=TranscricoesRepository(self.db)
         transcription=transcricaoRepository.create(transcricao)
         return transcription
